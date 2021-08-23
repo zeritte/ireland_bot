@@ -27,3 +27,17 @@ browser = webdriver.Chrome(
 browser.get(
     "https://burghquayregistrationoffice.inis.gov.ie/Website/AMSREG/AMSRegWeb.nsf/AppSelect?OpenForm"
 )
+
+html = browser.find_element_by_tag_name("html")
+
+category = browser.find_element_by_xpath('//*[@id="Category"]')
+category = Select(category)
+category.select_by_visible_text("All")
+
+sub_category = browser.find_element_by_xpath('//*[@id="SubCategory"]')
+sub_category = Select(sub_category)
+sub_category.select_by_visible_text("All")
+
+confirm_gnib = browser.find_element_by_xpath('//*[@id="ConfirmGNIB"]')
+confirm_gnib = Select(confirm_gnib)
+confirm_gnib.select_by_visible_text("No")
