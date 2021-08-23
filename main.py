@@ -56,3 +56,7 @@ browser.execute_script(
 
 # cookies_close = browser.find_element_by_xpath('//*[@id="cookiescript_close"]')
 # cookies_close.click()
+
+declaration = browser.find_element_by_xpath('//*[@id="dvDeclareCheck"]')
+declaration.click()
+
