@@ -114,3 +114,5 @@ appointment_type.select_by_visible_text("closest to today")
 
 find_button = browser.find_element_by_xpath('//*[@id="btSrch4Apps"]')
 find_button.click()
+
+sleep(0.3)  # TODO: should change
