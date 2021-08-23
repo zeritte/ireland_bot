@@ -41,3 +41,18 @@ sub_category.select_by_visible_text("All")
 confirm_gnib = browser.find_element_by_xpath('//*[@id="ConfirmGNIB"]')
 confirm_gnib = Select(confirm_gnib)
 confirm_gnib.select_by_visible_text("No")
+
+browser.execute_script(
+    """
+    try {
+        let cookie1 = document.getElementById('cookiescript_injected');
+        let cookie2 = document.getElementById('cookiescript_badge');
+        cookie1.remove();
+        cookie2.remove();
+    } catch {
+    }
+"""
+)
+
+# cookies_close = browser.find_element_by_xpath('//*[@id="cookiescript_close"]')
+# cookies_close.click()
