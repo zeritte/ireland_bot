@@ -116,3 +116,5 @@ find_button = browser.find_element_by_xpath('//*[@id="btSrch4Apps"]')
 find_button.click()
 
 sleep(0.3)  # TODO: should change
+
+source: str = browser.page_source
