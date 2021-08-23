@@ -87,3 +87,9 @@ date_of_birth.send_keys(DATE_OF_BIRTH)
 nationality = browser.find_element_by_xpath('//*[@id="Nationality"]')
 nationality = Select(nationality)
 nationality.select_by_visible_text(NATIONALITY)
+
+email = browser.find_element_by_xpath('//*[@id="Email"]')
+email.send_keys(EMAIL)
+
+confirm_email = browser.find_element_by_xpath('//*[@id="EmailConfirm"]')
+confirm_email.send_keys(EMAIL)
