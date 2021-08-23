@@ -97,3 +97,7 @@ confirm_email.send_keys(EMAIL)
 family_application = browser.find_element_by_xpath('//*[@id="FamAppYN"]')
 family_application = Select(family_application)
 family_application.select_by_visible_text("No")
+
+passport_travel_doc = browser.find_element_by_xpath('//*[@id="PPNoYN"]')
+passport_travel_doc = Select(passport_travel_doc)
+passport_travel_doc.select_by_visible_text("Yes")
