@@ -93,3 +93,7 @@ email.send_keys(EMAIL)
 
 confirm_email = browser.find_element_by_xpath('//*[@id="EmailConfirm"]')
 confirm_email.send_keys(EMAIL)
+
+family_application = browser.find_element_by_xpath('//*[@id="FamAppYN"]')
+family_application = Select(family_application)
+family_application.select_by_visible_text("No")
