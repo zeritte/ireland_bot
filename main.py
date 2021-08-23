@@ -107,3 +107,7 @@ passport_number.send_keys(PASSPORT_NUMBER)
 
 look_for_appointment_button = browser.find_element_by_xpath('//*[@id="btLook4App"]')
 look_for_appointment_button.click()
+
+appointment_type = browser.find_element_by_xpath('//*[@id="AppSelectChoice"]')
+appointment_type = Select(appointment_type)
+appointment_type.select_by_visible_text("closest to today")
