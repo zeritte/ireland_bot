@@ -131,3 +131,5 @@ else:
 
 
 # button = browser.find_element_by_xpath('//*[text()="Book This"]')
+
+browser.quit()
