@@ -81,3 +81,5 @@ function getElementByXpath(path) {
 getElementByXpath('//*[@id="DOB"]').removeAttribute('readonly');
 """
 )
+date_of_birth = browser.find_element_by_xpath('//*[@id="DOB"]')
+date_of_birth.send_keys(DATE_OF_BIRTH)
