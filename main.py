@@ -72,3 +72,12 @@ middle_name.send_keys(MIDDLE_NAME)
 
 surname = browser.find_element_by_xpath('//*[@id="SurName"]')
 surname.send_keys(SURNAME)
+
+browser.execute_script(
+    """
+function getElementByXpath(path) {
+  return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+}
+getElementByXpath('//*[@id="DOB"]').removeAttribute('readonly');
+"""
+)
