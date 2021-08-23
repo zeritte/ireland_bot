@@ -60,3 +60,6 @@ browser.execute_script(
 declaration = browser.find_element_by_xpath('//*[@id="dvDeclareCheck"]')
 declaration.click()
 
+salutation = browser.find_element_by_xpath('//*[@id="Salutation"]')
+salutation = Select(salutation)
+salutation.select_by_visible_text(SALUTATION)
