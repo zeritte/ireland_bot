@@ -104,3 +104,6 @@ passport_travel_doc.select_by_visible_text("Yes")
 
 passport_number = browser.find_element_by_xpath('//*[@id="PPNo"]')
 passport_number.send_keys(PASSPORT_NUMBER)
+
+look_for_appointment_button = browser.find_element_by_xpath('//*[@id="btLook4App"]')
+look_for_appointment_button.click()
