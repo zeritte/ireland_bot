@@ -118,3 +118,13 @@ find_button.click()
 sleep(0.3)  # TODO: should change
 
 source: str = browser.page_source
+
+if "No appointment" in source:
+    print("Could not find any slot")
+else:
+    # body = browser.find_element_by_xpath('//*[@id="dvAppOptions"]')
+    # body.screenshot(f"ss_{ts}.png")
+    browser.save_screenshot(f"ss_{ts}.png")
+    f = open(f"html_{ts}.html", "w")
+    f.write(source)
+    f.close()
