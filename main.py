@@ -63,3 +63,12 @@ declaration.click()
 salutation = browser.find_element_by_xpath('//*[@id="Salutation"]')
 salutation = Select(salutation)
 salutation.select_by_visible_text(SALUTATION)
+
+given_name = browser.find_element_by_xpath('//*[@id="GivenName"]')
+given_name.send_keys(GIVEN_NAME)
+
+middle_name = browser.find_element_by_xpath('//*[@id="MidName"]')
+middle_name.send_keys(MIDDLE_NAME)
+
+middle_name = browser.find_element_by_xpath('//*[@id="SurName"]')
+middle_name.send_keys(SURNAME)
