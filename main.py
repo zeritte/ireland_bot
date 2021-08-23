@@ -21,7 +21,7 @@ NATIONALITY = "Turkey, Republic of"
 EMAIL = "email@email.co"
 PASSPORT_NUMBER = "123456"
 
-available_threads = [1, 2, 3, 4, 5]
+available_threads = list(range(1, 11))
 number_of_checks = 0
 
 
@@ -138,12 +138,14 @@ def reservation(thread_number):
         if "No appointment" in source:
             print("Could not find any slot")
         else:
+            print("Found slot")
             # body = browser.find_element_by_xpath('//*[@id="dvAppOptions"]')
             # body.screenshot(f"ss_{ts}.png")
-            browser.save_screenshot(f"ss_{ts}.png")
-            f = open(f"html_{ts}.html", "w")
-            f.write(source)
-            f.close()
+
+        browser.save_screenshot(f"screenshots/ss_{ts}.png")
+        f = open(f"htmls/html_{ts}.html", "w")
+        f.write(source)
+        f.close()
 
         # button = browser.find_element_by_xpath('//*[text()="Book This"]')
 
@@ -164,8 +166,7 @@ try:
             th.start()
             available_threads.pop(0)
             print(f"{thread_to_use} is in use, left others {available_threads}")
-            sleep(5)
-        sleep(0.5)
+            sleep(1)
 except KeyboardInterrupt:
     print(f"Done {number_of_checks} checks.")
     print("Finished")
